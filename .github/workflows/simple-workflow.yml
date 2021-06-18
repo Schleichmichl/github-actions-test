@@ -36,4 +36,8 @@ jobs:
           myDir=$(pwd)
           echo $myDir ist das aktuelle Verzeichnis
           myS=${{secrets.MYSECRET}}
-          echo Geheimnis $myS
+          if [ "$myS" = "GEHEIM" ]; then
+            echo "Strings are equal."
+          else
+              echo "Strings are not equal."
+          fi
