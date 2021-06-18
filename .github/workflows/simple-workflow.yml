@@ -35,4 +35,5 @@ jobs:
           echo Add other actions to build,
           myDir=$(pwd)
           echo $myDir ist das aktuelle Verzeichnis
-          echo Geheimnis ${{secrets.MYSECRET}}
+          myS=${{secrets.MYSECRET}}
+          echo Geheimnis $myS
